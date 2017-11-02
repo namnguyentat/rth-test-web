@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  web:
+    extends:
+      file: docker-compose-common.yml
+      service: web
+    container_name: rth_web_staging
+    environment:
+      - NODE_ENV=staging

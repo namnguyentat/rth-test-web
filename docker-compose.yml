@@ -1,0 +1,29 @@
+version: '2'
+
+services:
+  web:
+    extends:
+      file: docker-compose-common.yml
+      service: web
+    container_name: rth_web
+    ports:
+      - 3000:3000
+    environment:
+      - NODE_ENV=development
+    command: ["yarn", "start"]
+    tty: true
+    stdin_open: true
+
+  web_test:
+    extends:
+      file: docker-compose-common.yml
+      service: web
+    container_name: rth_web_test
+    ports:
+      - 3002:3000
+    environment:
+      - NODE_ENV=development
+      - TEST=1
+    command: ["yarn", "start"]
+    tty: true
+    stdin_open: true

@@ -1,0 +1,42 @@
+[ignore]
+.*/node_modules/babel-relay-plugin/.*
+.*/node_modules/fbjs/.*
+.*/node_modules/graphql/.*
+.*/node_modules/immutable/.*
+.*/node_modules/redux-form/.*
+.*/node_modules/radium/*
+.*/node_modules/draft-js/*
+.*/node_modules/react-draft-wysiwyg/*
+.*/__generated__/.*
+
+[include]
+./src/*.js
+
+[libs]
+decls/
+flow-typed
+
+[lints]
+
+[options]
+module.name_mapper='^constants\/\(.*\)$' -> '<PROJECT_ROOT>/src/constants/\1'
+module.name_mapper='^constants$' -> '<PROJECT_ROOT>/src/constants/index'
+module.name_mapper='^components\/\(.*\)$' -> '<PROJECT_ROOT>/src/components/\1'
+module.name_mapper='^config\/\(.*\)$' -> '<PROJECT_ROOT>/src/config/\1'
+module.name_mapper='^config$' -> '<PROJECT_ROOT>/src/config/index'
+module.name_mapper='^environment\/\(.*\)$' -> '<PROJECT_ROOT>/src/environment/\1'
+module.name_mapper='^environment$' -> '<PROJECT_ROOT>/src/environment/index'
+module.name_mapper='^layouts\/\(.*\)$' -> '<PROJECT_ROOT>/src/layouts/\1'
+module.name_mapper='^relay\/\(.*\)$' -> '<PROJECT_ROOT>/src/relay/\1'
+module.name_mapper='^relay$' -> '<PROJECT_ROOT>/src/relay/index'
+module.name_mapper='^reduxx\/\(.*\)$' -> '<PROJECT_ROOT>/src/reduxx/\1'
+module.name_mapper='^reduxx$' -> '<PROJECT_ROOT>/src/reduxx/index'
+module.name_mapper='^routes\/\(.*\)$' -> '<PROJECT_ROOT>/src/routes/\1'
+module.name_mapper='^routes$' -> '<PROJECT_ROOT>/src/routes/index'
+module.name_mapper='^I18n\/\(.*\)$' -> '<PROJECT_ROOT>/src/I18n/\1'
+module.name_mapper='^I18n$' -> '<PROJECT_ROOT>/src/I18n/index'
+module.name_mapper='^hocs\/\(.*\)$' -> '<PROJECT_ROOT>/src/hocs/\1'
+module.name_mapper='^setup\/\(.*\)$' -> '<PROJECT_ROOT>/src/setup/\1'
+module.name_mapper='^setup$' -> '<PROJECT_ROOT>/src/setup/index'
+module.name_mapper='^lib\/\(.*\)$' -> '<PROJECT_ROOT>/src/lib/\1'
+module.name_mapper='^flow-type$' -> '<PROJECT_ROOT>/src/flow-type/index'
